@@ -1,0 +1,118 @@
+/* Reset and Base Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #6F8393FF; /* primary background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #AAB6C1FF;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #AAB6C1FF;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header .tagline {
+  font-size: 22px;
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #AAB6C1FF;
+  width: 0;
+  animation: typing 4s steps(34) forwards, blink 0.7s step-end infinite;
+  color: #AAB6C1FF;
+}
+
+/* Container */
+.container {
+  background-color: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  text-align: center;
+  color: #333;
+}
+
+/* Inputs and Buttons */
+input, button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+input {
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #6F8393FF;
+  outline: none;
+}
+
+button {
+  background-color: #6F8393FF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #5a6f7d;
+  transform: scale(1.02);
+}
+
+/* Links (Forgot password, Login/Signup redirect) */
+p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+p a {
+  color: #6F8393FF;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+p a:hover {
+  color: white;
+  background-color: #6F8393FF;
+  cursor: pointer;
+}
+
+/* Typing animation for tagline */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #AAB6C1FF; }
+}
